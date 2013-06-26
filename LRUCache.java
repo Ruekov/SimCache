@@ -7,7 +7,22 @@ package SimCache;
 
 public class LRUCache extends memoryCache{
     
-
+    
+    public LRUCache(){
+        
+        this(4);
+        
+    }
+    
+    public LRUCache(int blocks){
+        
+        this.memBlocks= blocks;
+        this.numberMises = 0;
+        
+        
+        
+    }
+   
     @Override
     boolean hitBlock(Object block){
         
@@ -34,5 +49,6 @@ public class LRUCache extends memoryCache{
         this.numberMises++;
         return false;
     }
+
    
 }

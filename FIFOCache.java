@@ -6,6 +6,19 @@ package SimCache;
  */
 public class FIFOCache extends memoryCache {
     
+    public FIFOCache(){
+        
+        this(4);
+        
+    }
+    
+    public FIFOCache(int blocks){
+        
+        this.memBlocks= blocks;
+        this.numberMises = 0;
+        
+    }
+    
     @Override
     boolean hitBlock(Object block) {
         

@@ -9,17 +9,9 @@ import java.util.Objects;
  */
 abstract class memoryCache {
     
-    private int memBlocks;
+    protected int memBlocks;
     protected int numberMises;
     ArrayList<Object> CacheBlocks = new ArrayList<Object>();
-
-    
-    public memoryCache(){
-        
-        memBlocks = 4;
-        numberMises = 0;
-        
-    }
    
     public boolean setNumBlock(int numBlock){
     
