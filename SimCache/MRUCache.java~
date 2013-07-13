@@ -6,9 +6,9 @@ import java.util.*;
  *
  * @author guillem
  */
-
 public class MRUCache extends memoryCache{
     
+    //private boolean[] state = new boolean[4];
     ArrayList<Boolean> state = new ArrayList<Boolean>();
     
     public MRUCache(){
@@ -82,6 +82,8 @@ public class MRUCache extends memoryCache{
 
     @Override
     boolean hitBlock(Object block) {
+        //System.out.print(this.CacheBlocks.toString());
+        //System.out.print(block);
         
         state.set(this.CacheBlocks.indexOf(block),true);
         
